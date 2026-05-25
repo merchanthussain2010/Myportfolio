@@ -1,101 +1,1181 @@
-@media(max-width:950px){
+<!DOCTYPE html>
+<html lang="en">
 
-  section{
-    padding:80px 0;
-  }
+<head>
 
-  .hero{
-    padding-top:120px;
-    min-height:auto;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  .hero-wrapper{
-    grid-template-columns:1fr;
-    text-align:center;
-    gap:50px;
-  }
+  <title>Hussain Merchant | Supply Chain & Operations Analyst</title>
 
-  .hero-text h1{
-    font-size:52px;
-    line-height:1.05;
-  }
+  <meta name="description"
+    content="Hussain Merchant - Supply Chain & Operations Analyst specializing in logistics, warehouse operations, KPI tracking, demand planning, analytics, and process optimization." />
 
-  .hero-text h2{
-    font-size:24px;
-  }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-  .hero-text p{
-    font-size:15px;
-    line-height:1.8;
-    margin:auto auto 30px;
-  }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-  .hero-buttons{
-    justify-content:center;
-  }
+  <style>
 
-  .hero-stats{
-    justify-content:center;
-  }
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
 
-  .stat-card{
-    width:100%;
-    max-width:240px;
-  }
+    body{
+      font-family:'Montserrat',sans-serif;
+      background:#071018;
+      color:#ffffff;
+      overflow-x:hidden;
+    }
 
-  .profile-card{
-    width:100%;
-    max-width:340px;
-    height:420px;
-  }
+    body::before{
+      content:"";
+      position:fixed;
+      width:100%;
+      height:100%;
+      background:
+      radial-gradient(circle at top left, rgba(34,197,94,0.10), transparent 22%),
+      radial-gradient(circle at bottom right, rgba(59,130,246,0.12), transparent 25%);
+      z-index:-1;
+    }
 
-  .floating-card{
-    display:none;
-  }
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
-  .section-title h2{
-    font-size:34px;
-  }
+    img{
+      max-width:100%;
+      display:block;
+    }
 
-  .card{
-    padding:28px;
-  }
+    .container{
+      width:90%;
+      max-width:1250px;
+      margin:auto;
+    }
 
-  .timeline::after{
-    left:20px;
-  }
+    section{
+      padding:100px 0;
+    }
 
-  .timeline-item{
-    width:100%;
-    padding-left:65px;
-    padding-right:15px;
-  }
+    /* NAVBAR */
 
-  .timeline-item::after{
-    left:10px;
-  }
+    nav{
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:999;
+      backdrop-filter:blur(14px);
+      background:rgba(7,16,24,0.88);
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
 
-  .right{
-    left:0;
-  }
+    .nav-container{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+    }
 
-  .nav-links{
-    display:none;
-  }
+    .logo{
+      font-size:28px;
+      font-weight:800;
+      color:#22c55e;
+    }
 
-  .contact-box{
-    padding:40px 25px;
-  }
+    .nav-links{
+      display:flex;
+      gap:28px;
+    }
 
-  .contact-links{
-    flex-direction:column;
-    align-items:center;
-  }
+    .nav-links a{
+      font-size:15px;
+      transition:0.3s;
+      color:#e2e8f0;
+    }
 
-  .contact-links a{
-    width:100%;
-    max-width:280px;
-    text-align:center;
-  }
+    .nav-links a:hover{
+      color:#22c55e;
+    }
 
-}
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding-top:120px;
+    }
+
+    .hero-wrapper{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:70px;
+      align-items:center;
+    }
+
+    .hero-badge{
+      display:inline-block;
+      padding:12px 18px;
+      border-radius:30px;
+      background:rgba(34,197,94,0.12);
+      border:1px solid rgba(34,197,94,0.25);
+      color:#22c55e;
+      margin-bottom:25px;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .hero-text h1{
+      font-size:78px;
+      line-height:1;
+      margin-bottom:18px;
+      font-weight:800;
+    }
+
+    .hero-text h2{
+      font-size:30px;
+      color:#22c55e;
+      margin-bottom:25px;
+    }
+
+    .hero-text p{
+      color:#cbd5e1;
+      line-height:1.9;
+      max-width:650px;
+      margin-bottom:35px;
+      font-size:16px;
+    }
+
+    /* STATS */
+
+    .hero-stats{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      margin-bottom:35px;
+    }
+
+    .stat-card{
+      background:rgba(17,24,39,0.85);
+      border:1px solid rgba(255,255,255,0.06);
+      padding:20px;
+      border-radius:18px;
+      min-width:170px;
+      transition:0.3s;
+      backdrop-filter:blur(10px);
+    }
+
+    .stat-card:hover{
+      transform:translateY(-5px);
+      border-color:#22c55e;
+    }
+
+    .stat-card h3{
+      color:#22c55e;
+      font-size:32px;
+      margin-bottom:8px;
+    }
+
+    .stat-card span{
+      color:#cbd5e1;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    /* BUTTONS */
+
+    .hero-buttons{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:15px 28px;
+      border-radius:12px;
+      font-weight:600;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .primary-btn{
+      background:#22c55e;
+      color:#000;
+    }
+
+    .primary-btn:hover{
+      background:#16a34a;
+      transform:translateY(-3px);
+    }
+
+    .secondary-btn{
+      border:1px solid rgba(255,255,255,0.12);
+    }
+
+    .secondary-btn:hover{
+      border-color:#22c55e;
+      color:#22c55e;
+    }
+
+    /* HERO IMAGE */
+
+    .hero-image-wrapper{
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .profile-card{
+      width:420px;
+      height:520px;
+      border-radius:35px;
+      overflow:hidden;
+      background:#111827;
+      border:1px solid rgba(255,255,255,0.06);
+      box-shadow:0 0 45px rgba(34,197,94,0.18);
+    }
+
+    .profile-image{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    /* FLOATING CARDS */
+
+    .floating-card{
+      position:absolute;
+      background:rgba(17,24,39,0.94);
+      border:1px solid rgba(255,255,255,0.06);
+      padding:18px;
+      border-radius:18px;
+      width:210px;
+      backdrop-filter:blur(12px);
+      box-shadow:0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .floating-card h3{
+      color:#22c55e;
+      font-size:30px;
+      margin-bottom:8px;
+    }
+
+    .floating-card p{
+      color:#cbd5e1;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .card-1{
+      top:20px;
+      left:-40px;
+    }
+
+    .card-2{
+      bottom:40px;
+      right:-40px;
+    }
+
+    .card-3{
+      bottom:-20px;
+      left:40px;
+    }
+
+    /* SECTION TITLE */
+
+    .section-title{
+      text-align:center;
+      margin-bottom:70px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:10px;
+      font-weight:800;
+    }
+
+    .section-title p{
+      color:#94a3b8;
+    }
+
+    /* GRID */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:28px;
+    }
+
+    /* CARD */
+
+    .card{
+      background:rgba(17,24,39,0.82);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:24px;
+      padding:35px;
+      transition:0.35s;
+      backdrop-filter:blur(12px);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#22c55e;
+    }
+
+    .card h3{
+      color:#22c55e;
+      margin-bottom:16px;
+      font-size:22px;
+    }
+
+    .card p,
+    .card li{
+      color:#cbd5e1;
+      line-height:1.9;
+      font-size:15px;
+    }
+
+    ul{
+      padding-left:18px;
+    }
+
+    /* TIMELINE */
+
+    .timeline{
+      position:relative;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    .timeline::after{
+      content:'';
+      position:absolute;
+      width:3px;
+      background:#22c55e;
+      top:0;
+      bottom:0;
+      left:50%;
+    }
+
+    .timeline-item{
+      padding:20px 40px;
+      position:relative;
+      width:50%;
+    }
+
+    .timeline-item::after{
+      content:'';
+      position:absolute;
+      width:20px;
+      height:20px;
+      background:#22c55e;
+      border-radius:50%;
+      top:35px;
+      right:-10px;
+    }
+
+    .left{
+      left:0;
+    }
+
+    .right{
+      left:50%;
+    }
+
+    .right::after{
+      left:-10px;
+    }
+
+    .timeline-content{
+      background:#111827;
+      padding:30px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,0.05);
+    }
+
+    .timeline-content h3{
+      color:#22c55e;
+      margin-bottom:10px;
+    }
+
+    .timeline-content span{
+      color:#94a3b8;
+      font-size:14px;
+      display:block;
+      margin-bottom:18px;
+    }
+
+    /* SKILLS */
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      justify-content:center;
+    }
+
+    .skill{
+      padding:14px 18px;
+      border-radius:12px;
+      background:#111827;
+      border:1px solid rgba(255,255,255,0.06);
+      transition:0.3s;
+    }
+
+    .skill:hover{
+      border-color:#22c55e;
+      transform:translateY(-3px);
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+      text-align:center;
+      background:rgba(17,24,39,0.85);
+      border-radius:30px;
+      padding:60px;
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    .contact-links{
+      display:flex;
+      gap:18px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:35px;
+    }
+
+    .contact-links a{
+      padding:15px 24px;
+      border-radius:12px;
+      background:#0f172a;
+      border:1px solid rgba(255,255,255,0.08);
+      transition:0.3s;
+    }
+
+    .contact-links a:hover{
+      background:#22c55e;
+      color:#000;
+    }
+
+    footer{
+      padding:35px 0;
+      text-align:center;
+      color:#94a3b8;
+      border-top:1px solid rgba(255,255,255,0.06);
+    }
+
+    /* MOBILE */
+
+    @media(max-width:950px){
+
+      section{
+        padding:80px 0;
+      }
+
+      .hero{
+        padding-top:120px;
+        min-height:auto;
+      }
+
+      .hero-wrapper{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:50px;
+      }
+
+      .hero-text h1{
+        font-size:52px;
+        line-height:1.05;
+      }
+
+      .hero-text h2{
+        font-size:24px;
+      }
+
+      .hero-text p{
+        font-size:15px;
+        line-height:1.8;
+        margin:auto auto 30px;
+      }
+
+      .hero-buttons{
+        justify-content:center;
+      }
+
+      .hero-stats{
+        justify-content:center;
+      }
+
+      .stat-card{
+        width:100%;
+        max-width:240px;
+      }
+
+      .profile-card{
+        width:100%;
+        max-width:340px;
+        height:420px;
+      }
+
+      .floating-card{
+        display:none;
+      }
+
+      .section-title h2{
+        font-size:34px;
+      }
+
+      .card{
+        padding:28px;
+      }
+
+      .timeline::after{
+        left:20px;
+      }
+
+      .timeline-item{
+        width:100%;
+        padding-left:65px;
+        padding-right:15px;
+      }
+
+      .timeline-item::after{
+        left:10px;
+      }
+
+      .right{
+        left:0;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+      .contact-box{
+        padding:40px 25px;
+      }
+
+      .contact-links{
+        flex-direction:column;
+        align-items:center;
+      }
+
+      .contact-links a{
+        width:100%;
+        max-width:280px;
+        text-align:center;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="container nav-container">
+
+      <div class="logo">
+        Hussain Merchant
+      </div>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-wrapper">
+
+      <div class="hero-text">
+
+        <div class="hero-badge">
+          Supply Chain • Operations • Analytics
+        </div>
+
+        <h1>
+          Hussain<br>
+          Merchant
+        </h1>
+
+        <h2>
+          Supply Chain & Operations Analyst
+        </h2>
+
+        <p>
+          Supply Chain & Operations Analyst with 4+ years of experience in logistics,
+          warehouse operations, demand planning, KPI tracking, vendor management,
+          inventory control, and process optimization across enterprise-scale
+          supply chain environments.
+        </p>
+
+        <div class="hero-stats">
+
+          <div class="stat-card">
+            <h3>4+</h3>
+            <span>Years Experience</span>
+          </div>
+
+          <div class="stat-card">
+            <h3>25+</h3>
+            <span>Suppliers Managed</span>
+          </div>
+
+          <div class="stat-card">
+            <h3>15%</h3>
+            <span>Forecast Accuracy Improvement</span>
+          </div>
+
+        </div>
+
+        <div class="hero-buttons">
+
+          <a href="Hussain_Merchant_Resume.pdf"
+            download
+            class="btn primary-btn">
+
+            Download Resume
+
+          </a>
+
+          <a href="#contact"
+            class="btn secondary-btn">
+
+            Contact Me
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image-wrapper">
+
+        <div class="profile-card">
+
+          <!-- ADD YOUR IMAGE URL HERE -->
+
+          <img
+            src="YOUR_IMAGE_URL_HERE"
+            alt="Hussain Merchant"
+            class="profile-image">
+
+        </div>
+
+        <div class="floating-card card-1">
+          <h3>+20%</h3>
+          <p>Supplier Service Improvement</p>
+        </div>
+
+        <div class="floating-card card-2">
+          <h3>-11%</h3>
+          <p>Cost Per Unit Reduction</p>
+        </div>
+
+        <div class="floating-card card-3">
+          <h3>7</h3>
+          <p>Fulfillment Centers Managed</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Professional Summary</h2>
+
+        <p>
+          Logistics, operations, analytics, procurement, and supply chain optimization expertise.
+        </p>
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <h3>Supply Chain Operations</h3>
+
+          <p>
+            Experienced in supply chain optimization, warehouse operations,
+            demand planning, production scheduling, inventory control,
+            procurement coordination, logistics management,
+            S&OP, vendor relationship management, and cost reduction.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>Business & Decision Support</h3>
+
+          <p>
+            Skilled in KPI tracking, forecasting, scenario planning,
+            budgeting, operational reporting, business process standardization,
+            continuous improvement, compliance management,
+            and data-driven decision making.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>Technical & Strategic Skills</h3>
+
+          <p>
+            Strong background in SQL, Excel, SAP ERP,
+            Power BI, Lean methodologies, Agile & Scrum,
+            stakeholder engagement, change management,
+            root cause analysis, and strategic sourcing.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+
+  <section id="experience">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Professional Experience</h2>
+
+        <p>
+          Enterprise operations, cloud planning, logistics, and analytical experience.
+        </p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item left">
+
+          <div class="timeline-content">
+
+            <h3>
+              Business Analyst & Supply Chain Operations
+            </h3>
+
+            <span>
+              Microsoft (Contract) — Cloud Planning | Oct 2025 – Present
+            </span>
+
+            <ul>
+
+              <li>
+                Analyzed large-scale supply chain and cloud capacity datasets to support AI GPU demand planning.
+              </li>
+
+              <li>
+                Identified capacity risks, utilization gaps, and optimization opportunities across regions.
+              </li>
+
+              <li>
+                Extracted and analyzed data using SQL and Excel for root cause analysis.
+              </li>
+
+              <li>
+                Improved process cycle time and execution reliability through data-driven decision making.
+              </li>
+
+              <li>
+                Developed dashboards, reports, and executive-ready presentations for leadership teams.
+              </li>
+
+              <li>
+                Monitored KPIs including capacity utilization, demand variance, and fulfillment timelines.
+              </li>
+
+              <li>
+                Supported analytical projects involving new planning processes and policy changes.
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="timeline-item right">
+
+          <div class="timeline-content">
+
+            <h3>
+              Supply Chain Analyst
+            </h3>
+
+            <span>
+              Mahindra Logistics | Jun 2020 – Jul 2023
+            </span>
+
+            <ul>
+
+              <li>
+                Improved forecast accuracy by 15% across 7 fulfillment centers.
+              </li>
+
+              <li>
+                Reduced stockouts through SKU-level performance tracking and supply chain analysis.
+              </li>
+
+              <li>
+                Performed root cause analysis improving logistics resolution speed by 12%.
+              </li>
+
+              <li>
+                Managed vendor performance for 25+ suppliers using KPI scorecards.
+              </li>
+
+              <li>
+                Improved supplier service levels by 20% through corrective action planning.
+              </li>
+
+              <li>
+                Reduced cost per unit by 11% by optimizing transportation and reporting processes.
+              </li>
+
+              <li>
+                Standardized SOP workflows improving operational consistency and compliance.
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Projects</h2>
+
+        <p>
+          Supply chain analytics and operational optimization initiatives.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <h3>
+            Master Data Signal Integrity Validation
+          </h3>
+
+          <p style="margin-bottom:20px; color:#94a3b8;">
+            Microsoft — Cloud Planning & Supply Chain Operations
+          </p>
+
+          <ul>
+
+            <li>
+              Designed a 6-layer SQL validation framework for AI GPU demand planning data.
+            </li>
+
+            <li>
+              Implemented null checks, duplicate validation, domain validation, and referential integrity.
+            </li>
+
+            <li>
+              Built automated audit log pipelines tracking issue resolution trends.
+            </li>
+
+            <li>
+              Developed Power BI dashboards and executive reporting workflows.
+            </li>
+
+            <li>
+              Improved forecast accuracy by identifying stale and duplicate demand signals.
+            </li>
+
+            <li>
+              Tools: SQL (TSQL / Azure Synapse), Power BI, Excel
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <h3>
+            Vendor Performance Scorecard & Logistics KPI Tracker
+          </h3>
+
+          <p style="margin-bottom:20px; color:#94a3b8;">
+            Mahindra Logistics — Supply Chain Analytics
+          </p>
+
+          <ul>
+
+            <li>
+              Developed vendor scorecard system for 25+ suppliers and 7 fulfillment centers.
+            </li>
+
+            <li>
+              Automated logistics KPI tracking replacing manual reporting processes.
+            </li>
+
+            <li>
+              Monitored delivery timeliness, order fill rate, billing accuracy, and damage rates.
+            </li>
+
+            <li>
+              Improved supplier service levels by 20% through structured reviews.
+            </li>
+
+            <li>
+              Reduced logistics cost per unit by 11%.
+            </li>
+
+            <li>
+              Tools: Python, Excel, SAP ERP (MM/SD/SCM)
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Skills & Technologies</h2>
+
+        <p>
+          Operations, analytics, ERP systems, logistics, and supply chain technologies.
+        </p>
+
+      </div>
+
+      <div class="skills">
+
+        <div class="skill">SQL</div>
+        <div class="skill">Excel</div>
+        <div class="skill">Power BI</div>
+        <div class="skill">SAP ERP</div>
+        <div class="skill">Microsoft Access</div>
+        <div class="skill">MS Project</div>
+        <div class="skill">JIRA</div>
+        <div class="skill">Trello</div>
+        <div class="skill">Minitab</div>
+        <div class="skill">Forecasting</div>
+        <div class="skill">Demand Planning</div>
+        <div class="skill">Inventory Control</div>
+        <div class="skill">Warehouse Operations</div>
+        <div class="skill">Supply Chain Optimization</div>
+        <div class="skill">Vendor Management</div>
+        <div class="skill">KPI Tracking</div>
+        <div class="skill">Operational Reporting</div>
+        <div class="skill">Root Cause Analysis</div>
+        <div class="skill">Lean Methodologies</div>
+        <div class="skill">Strategic Sourcing</div>
+        <div class="skill">Agile & Scrum</div>
+        <div class="skill">Stakeholder Engagement</div>
+        <div class="skill">Change Management</div>
+        <div class="skill">Scenario Planning</div>
+        <div class="skill">Budgeting</div>
+        <div class="skill">Logistics Management</div>
+        <div class="skill">Procurement</div>
+        <div class="skill">S&OP</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+
+  <section id="education">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Education</h2>
+
+        <p>
+          Engineering and industrial management academic background.
+        </p>
+
+      </div>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <h3>
+            Master of Science
+          </h3>
+
+          <p>
+
+            Engineering Management / Industrial Management<br><br>
+
+            California State University, CA, USA<br><br>
+
+            Aug 2023 – May 2025
+
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>
+            Bachelor of Engineering
+          </h3>
+
+          <p>
+
+            Mechanical Engineering<br><br>
+
+            Savitribai Phule Pune University, Pune, India<br><br>
+
+            Jun 2018 – Apr 2021
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2>
+          Let’s Connect
+        </h2>
+
+        <p style="margin-top:20px; color:#cbd5e1; line-height:1.9;">
+
+          Open to Supply Chain Analytics,
+          Operations Management,
+          Logistics Optimization,
+          Business Analytics,
+          Cloud Planning,
+          and Strategic Operations opportunities.
+
+        </p>
+
+        <div class="contact-links">
+
+          <a href="mailto:Merchanthussain20@gmail.com">
+            Email Me
+          </a>
+
+          <a href="tel:+17472028399">
+            Call Me
+          </a>
+
+          <a href="https://www.linkedin.com/in/merchant-hussain20/"
+            target="_blank">
+
+            LinkedIn
+
+          </a>
+
+          <a href="https://github.com/merchanthussain2010"
+            target="_blank">
+
+            GitHub
+
+          </a>
+
+        </div>
+
+        <div style="margin-top:35px; color:#94a3b8;">
+
+          Los Angeles, CA • Open To Relocation
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      © 2026 Hussain Merchant • Supply Chain & Operations Portfolio
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
